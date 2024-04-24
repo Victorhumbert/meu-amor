@@ -1,0 +1,125 @@
+.playerAudio{
+  width: 100%;
+}
+
+.btns{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.setas{
+  position: relative;
+  margin-top: 10px;
+  width: 20px;
+  height: 30px;
+  background: #E24C4C;
+  border: none;
+  clip-path: polygon(0% 0%, 0% 100%, 98% 55%, 100% 50%, 98% 45%);
+  border-radius: 5px;
+  transition: .2s;
+}
+.setas:hover{
+  background: #c92a2a;
+}
+
+
+.setas::after{
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 20px;
+  height: 30px;
+  background: #E24C4C;
+  clip-path: polygon(90% 0%, 100% 0%, 90% 100%, 100% 100% );
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.setas#prev{
+  rotate: 180deg;
+}
+
+#toggle{
+  display: flex;
+  gap: 5px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background:none;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50%;
+  transition: .5s;
+  outline: none;
+}
+#toggle:hover{
+  box-shadow: 0 0 8px #fff;
+}
+
+#toggle::after{
+  content: "";
+  margin-left: 4px;
+  width: 20px;
+  height: 30px;
+  background: #E24C4C;
+  border: none;
+  clip-path: polygon(0% 0%, 0% 100%, 98% 55%, 100% 50%, 98% 45%);
+  border-radius: 5px;
+  transition: .2s;
+}
+#toggle:hover::after{
+  background: #c92a2a;
+}
+#toggle.ativo::after,#toggle.ativo::before{
+  content: "";
+  display: block;
+  width: 8px;
+  height: 26px;
+  background: #E24C4C;
+  clip-path: none;
+  border-radius: 5px;
+  transition: 0s;
+}
+
+audio {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Estilo para os controles do player */
+#progress-bar{
+  position: relative;
+  margin-top: 30px;
+  width: 100%;
+  height: 4px;
+  background: #faa;
+  cursor: pointer;
+}
+
+#progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: #f22;
+  transition: .4s;
+}
+
+#progress-ball{
+  position: absolute;
+  display: block;
+  background: #f22;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  top: -5px;
+  left: 0%;
+  transition: .4s;
+}

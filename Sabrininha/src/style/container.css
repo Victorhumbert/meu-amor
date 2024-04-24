@@ -1,0 +1,52 @@
+.container{
+  display: grid;
+  justify-items: center;
+  background: linear-gradient(30deg,#cc2222 5%,#621B1B 30%, #C83737 100%);
+  padding: 90px 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+#root{
+  margin: 0 auto;
+}
+
+#disco {
+  background: linear-gradient(45deg, #000 40%, #ddd 50%, #000 60%);
+  padding: 20px;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+#disco.ativo{
+animation: girar infinite 6s linear ;
+}
+
+@keyframes girar{
+  from{
+    rotate: 0deg;
+  } to{
+    rotate: -360deg;
+  }
+}
+
+img{
+  width: 125px;
+  height: 125px;
+}
+
+h2{
+  position: relative;
+  animation: teamo infinite linear 5s;
+}
+
+@keyframes teamo {
+  from{
+    left: 110%;
+  } to {
+    left: -110%;
+  }
+}
